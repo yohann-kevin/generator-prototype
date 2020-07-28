@@ -17,7 +17,7 @@
 
         <div id="login">
             
-        <button><a id="linkConnect" href="connexion.php">Connexion</a></button>
+        <button><a id="linkConnect" href="login.php">Connexion</a></button>
             <button><a id="linkRegister" href="register.php">Inscription</a></button>
         </div>
 

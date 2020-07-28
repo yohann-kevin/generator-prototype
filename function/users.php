@@ -40,7 +40,34 @@ function register(){
     unset($_POST['pseudo']);
     unset($_POST['email']);
     }
+    return $errors;   
+}
 
-    return $errors;
-    
+function login(){
+    global $db;
+
+    extract($_POST);
+
+    $error = 'Les identifiants ne correspondent pas à nos enregistrements !';
+
+    $login = $db->prepare('SELECT id, password FROM users WHERE pseudo = ?');
+
+    $login->execute([$pseudo]);
+
+    $login = $login->fetch();
+
+    if(password_verify($password, $login['password'])){
+        $_SESSION['user'] = $login['id'];
+        header('Location: account.php');
+    }else{
+        return $error;
+    }
+}
+
+function logout(){
+    unset($_SESSION['user']);
+
+    session_destroy();
+
+    header('Location: index.php');
 }

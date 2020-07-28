@@ -21,10 +21,10 @@ if(!empty($_POST)){
         <span>ça marche</span>
         <?php endif; endif ?>
         <label>Votre pseudo :</label>
-        <input type="text" name="pseudo" value='<?php if(isset($_POST['pseudo']))echo $_POST['pseudo'] ?>'>
+        <input type="text" name="pseudo" value="<?php if(isset($_POST['pseudo']))echo $_POST['pseudo'] ?>">
 
         <label>Votre adresse Email :</label>
-        <input type="email" name="email" value='<?php if(isset($_POST['email']))echo $_POST['email'] ?>'>
+        <input type="email" name="email" value="<?php if(isset($_POST['email']))echo $_POST['email'] ?>">
 
         <label>Votre mot de passe :</label>
         <input type="password" name="password">
