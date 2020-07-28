@@ -16,9 +16,13 @@
         </nav>
 
         <div id="login">
-            
-        <button><a id="linkConnect" href="login.php">Connexion</a></button>
+            <?php if(isset($_SESSION['user'])) : ?>
+            <button><a href="account.php">Mon compte</a></button>
+            <button><a href="logout.php">Déconnexion</a></button>
+            <?php else : ?>
+            <button><a id="linkConnect" href="login.php">Connexion</a></button>
             <button><a id="linkRegister" href="register.php">Inscription</a></button>
+            <?php endif; ?>
         </div>
 
     </header>

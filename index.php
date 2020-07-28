@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once 'layouts/head.php';
 include_once 'layouts/header.php';
 ?>
