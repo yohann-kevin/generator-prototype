@@ -16,8 +16,9 @@
         </nav>
 
         <div id="login">
-            <button><a id="linkRegister" href="register.php">Connexion</a></button>
-            <button><a id="linkConnect" href="connexion.php">inscription</a></button>
+            
+        <button><a id="linkConnect" href="connexion.php">Connexion</a></button>
+            <button><a id="linkRegister" href="register.php">Inscription</a></button>
         </div>
 
     </header>
