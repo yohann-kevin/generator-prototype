@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'robotobold';
+    src: url('../public/fonts/roboto/roboto-bold-webfont.woff2') format('woff2'),
+         url('../public/fonts/roboto/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../public/fonts/roboto/roboto-regular-webfont.woff2') format('woff2'),
+         url('../public/fonts/roboto/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('../public/fonts/roboto/roboto-thin-webfont.woff2') format('woff2'),
+         url('../public/fonts/roboto/roboto-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #efefef;
+    font-family: 'robotoregular';
+}
+
+#header {
+    width: 100%;
+    height: 90px;
+    background-color: #2b292c;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #efefef;
+}
+
+#logoPassGen {
+    width: 225px;
+    height: 90px;
+}
+
+#menu {
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a {
+    font-size: 1.4rem;
+    display: block;
+    text-decoration: none;
+    color: #efefef;
+    padding: 10px 0px;
+}
+
+nav a:hover {
+    transition: color 250ms ease-in-out;
+    -webkit-transition: color 250ms ease-in-out;
+    -moz-transition: color 250ms ease-in-out;
+    -ms-transition: color 250ms ease-in-out;
+    -o-transition: color 250ms ease-in-out;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+li:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #efefef;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    -webkit-transition: transform 250ms ease-in-out;
+    -moz-transition: transform 250ms ease-in-out;
+    -ms-transition: transform 250ms ease-in-out;
+    -o-transition: transform 250ms ease-in-out;
+}
+
+li:hover:after {
+    transform: scaleX(1);
+}
+
+li.fromLeft:after {
+    transform-origin: 0% 50%;
+}
+
+
+
+#login {
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-height: 90px;
+}
+
+#login button {
+    width: 100%;
+    border: none;
+    color: #efefef;
+    background-color: #2b292c;
+    font-size: 1rem;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+#login button:hover {
+    cursor: pointer;
+    background-color: #efefef;
+    color: #2b292c;
+    font-weight: bold;
+}
+
+#underHeader {
+    width: 100%;
+}
+
+#underHeader img {
+    width: 100%;
+}
+
+#sectionTest {
+    width: 100%;
+}
+
+#sectionTest img {
+    width: 100%;
+}
+
+
+#footer {
+    width: 100%;
+    height: 50px;
+    background-color: #2b292c;
+    color: #efefef;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#footer p {
+    padding-top: 13px;
+}

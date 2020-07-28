@@ -1,0 +1,27 @@
+*
+{
+	margin : 0;
+	padding : 0;
+
+
+	font-family : arial;
+	color : #92C114; 
+}
+
+body
+{
+	background-color : #767271;
+}
+
+header
+{
+	border : 10px outset green;
+
+	background-color : black;
+	text-align : center;
+}
+
+.btnTest
+{
+	background-color : green;
+}
