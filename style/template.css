@@ -151,6 +151,15 @@ li.fromLeft:after {
     font-weight: bold;
 }
 
+#login button:hover a {
+    color: #2b292c;
+}
+
+#linkRegister,#linkConnect {
+    text-decoration: none;
+    color: #efefef;
+}
+
 #underHeader {
     width: 100%;
 }
