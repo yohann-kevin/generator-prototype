@@ -69,3 +69,13 @@ function logout(){
     session_destroy();
     header('Location: index.php');
 }
+
+function information(){
+    global $db;
+
+    $information = $db->prepare('SELECT email, pseudo FROM users WHERE id = ?');
+    $information->execute([$_SESSION['user']]);
+    $information = $information->fetch();
+
+    return $information;
+}
