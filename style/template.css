@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'robotobold';
     src: url('../public/fonts/roboto/roboto-bold-webfont.woff2') format('woff2'),
-         url('../public/fonts/roboto/roboto-bold-webfont.woff') format('woff');
+        url('../public/fonts/roboto/roboto-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -11,7 +11,7 @@
 @font-face {
     font-family: 'robotoregular';
     src: url('../public/fonts/roboto/roboto-regular-webfont.woff2') format('woff2'),
-         url('../public/fonts/roboto/roboto-regular-webfont.woff') format('woff');
+        url('../public/fonts/roboto/roboto-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -21,7 +21,7 @@
 @font-face {
     font-family: 'robotothin';
     src: url('../public/fonts/roboto/roboto-thin-webfont.woff2') format('woff2'),
-         url('../public/fonts/roboto/roboto-thin-webfont.woff') format('woff');
+        url('../public/fonts/roboto/roboto-thin-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -155,7 +155,10 @@ li.fromLeft:after {
     color: #2b292c;
 }
 
-#linkRegister,#linkConnect {
+#linkRegister,
+#linkConnect,
+#linkAccount,
+#logout {
     text-decoration: none;
     color: #efefef;
 }
