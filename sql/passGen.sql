@@ -23,10 +23,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   `pseudo` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Listage des données de la table passgen.users : ~0 rows (environ)
+-- Listage des données de la table passgen.users : ~2 rows (environ)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`id`, `email`, `pseudo`, `password`) VALUES
+	(1, 'test@test.fr', 'test', '$2y$10$QqrvDRcgxBP5WJLAXFCDTOPovM0puO4hblEuxtTXyYGIXKTBehgZm'),
+	(2, 'test@test.fr', 'michel', '$2y$10$WYBwC0LFAPwAFCBM86F8beV3LCgL81wbSRbn9ZtdMMS9l7VEbASLu');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
