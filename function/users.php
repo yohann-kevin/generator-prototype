@@ -96,11 +96,21 @@ function addPassword() {
    
     $registerPassword = $db->prepare('INSERT INTO  password(password, users_id) VALUES (:password, :users_id)');
     $registerPassword->execute([
-        'password' => password_hash($password, PASSWORD_DEFAULT),
+        'password' => htmlentities($password),
         'users_id' => $_SESSION['user']
     ]);
     header('Location: account.php');
     
 
     return $errors;
+}
+
+function getPassword() {
+    global $db;
+
+    $pass = $db->prepare('SELECT password.password FROM password INNER JOIN users ON password.users_id = users.id AND password.users_id = ?');
+    $pass->execute([$_SESSION['user']]);
+    $pass = $pass->fetchAll();
+    
+    return $pass;
 }
