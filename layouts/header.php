@@ -9,7 +9,7 @@
         <nav id="menu">
             <ul id="nav">
                 <li class="nav fromLeft"><a href="index.php">Accueil</a></li>
-                <li class="nav fromLeft"><a href="generateur.html">Tester</a></li>
+                <li class="nav fromLeft"><a href="generator.php">Tester</a></li>
                 <li class="nav fromLeft"><a href="Download.html">Télécharger</a></li>
                 <li class="nav fromLeft"><a href="contact.html">Contact</a></li>
             </ul>
