@@ -79,3 +79,28 @@ function information(){
 
     return $information;
 }
+
+function addPassword() {
+    global $db;
+
+    extract($_POST);
+    // $validation = true;
+
+    // $errors = [];
+
+    // if (empty($password)) {
+    //     $validation = false;
+    //     $errors = [];
+    // }
+
+   
+    $registerPassword = $db->prepare('INSERT INTO  password(password, users_id) VALUES (:password, :users_id)');
+    $registerPassword->execute([
+        'password' => password_hash($password, PASSWORD_DEFAULT),
+        'users_id' => $_SESSION['user']
+    ]);
+    header('Location: account.php');
+    
+
+    return $errors;
+}
