@@ -111,6 +111,17 @@ function getPassword() {
     $pass = $db->prepare('SELECT password.password FROM password INNER JOIN users ON password.users_id = users.id AND password.users_id = ?');
     $pass->execute([$_SESSION['user']]);
     $pass = $pass->fetchAll();
-    
+
     return $pass;
+}
+
+function verifyNumPass() {
+    global $db;
+
+    $pass = $db->prepare('SELECT password.password FROM password INNER JOIN users ON password.users_id = users.id AND password.users_id = ?');
+    $pass->execute([$_SESSION['user']]);
+    $pass = $pass->fetchAll();
+    $numPass = sizeof($pass);
+
+    return $numPass;
 }

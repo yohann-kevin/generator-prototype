@@ -9,9 +9,11 @@ $db = db();
 $info = information();
 $welcome = welcome();
 $passwords = getPassword();
+$num = verifyNumPass();
 ?>
 
 <h1><?= $welcome ?> <?= $info['pseudo']?></h1>
+<?= $num ?>
 <?php foreach ($passwords as $password): ?>
 <h2><?= $password['password'] ?></h2>
 <?php endforeach ; ?>
