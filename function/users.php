@@ -114,7 +114,7 @@ function addPassword() {
 function getPassword() {
     global $db;
 
-    $pass = $db->prepare('SELECT password.password FROM password INNER JOIN users ON password.users_id = users.id AND password.users_id = ?');
+    $pass = $db->prepare('SELECT password.* FROM password INNER JOIN users ON password.users_id = users.id AND password.users_id = ?');
     $pass->execute([$_SESSION['user']]);
     $pass = $pass->fetchAll();
 
@@ -130,4 +130,13 @@ function verifyNumPass() {
     $numPass = sizeof($pass);
 
     return $numPass;
+}
+
+function deletePass() {
+    global $db;
+
+    $id = (int)$_GET["id"];
+    $delete = $db->prepare("DELETE FROM password WHERE id = ?");
+    $delete->execute([$id]);
+    
 }

@@ -179,6 +179,9 @@ li.fromLeft:after {
     width: 100%;
 }
 
+#imgTrash:hover {
+    cursor: pointer;
+}
 
 #footer {
     width: 100%;
