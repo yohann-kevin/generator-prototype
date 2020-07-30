@@ -56,3 +56,18 @@ input:checked+.slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+
+#btnTest {
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#btnTest:hover {
+    cursor: pointer;
+}

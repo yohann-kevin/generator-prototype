@@ -13,7 +13,8 @@ let symbol = ['.', '/', '!', '$', '-', '_', '#', '*', '?'];
 // récupère l'élément html body
 let generator = document.getElementById('generator');
 // crée un titre en html
-let title = document.createElement('h1');
+// let title = document.createElement('h1');
+let title = document.createElement('input');
 
 let symbolActive = false;
 
@@ -25,6 +26,9 @@ function start() {
     activateSymbol();
     // on insère le titre dans le body
     generator.appendChild(title);
+    title.type = "text";
+    title.name = "password";
+    styleInput(title);
     for (let i = 0; i < 7; i++) {
         // on asigne nos différent charactère a la variable name
         if (name.length < 24) {
@@ -42,7 +46,8 @@ function start() {
         }
     }
     // on assigne la variable name a title
-    title.textContent = name;
+    title.value = name;
+    title.disabled = "disabled";
 }
 
 // fonction permettant de générer un nnuméro aléatoire
@@ -66,6 +71,11 @@ function activateSymbol() {
         symbolActive = false;
     }
     return symbolActive;
+}
+
+function styleInput(input) {
+    input.style.width = "250px";
+    input.style.height = "50px";
 }
 
 // lance la fonction start
