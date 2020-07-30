@@ -16,6 +16,24 @@
 CREATE DATABASE IF NOT EXISTS `passgen` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `passgen`;
 
+-- Listage de la structure de la table passgen. password
+CREATE TABLE IF NOT EXISTS `password` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `password` varchar(255) NOT NULL,
+  `users_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `users_id` (`users_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+-- Listage des données de la table passgen.password : ~2 rows (environ)
+/*!40000 ALTER TABLE `password` DISABLE KEYS */;
+INSERT INTO `password` (`id`, `password`, `users_id`) VALUES
+	(4, 'teBOcoNIryJUsuWUvySApyVO8_', 1),
+	(5, 'jaBUgaMYryJEdeFAsoTUmoXI1*', 1),
+	(9, 'xoCYpaJUwuWYpyCAneLAbeGO2!', 1),
+	(10, 'loDOsaQUneSOqiHIliMYziVO9!', 1);
+/*!40000 ALTER TABLE `password` ENABLE KEYS */;
+
 -- Listage de la structure de la table passgen. users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
