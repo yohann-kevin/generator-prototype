@@ -17,7 +17,7 @@ if(!empty($_POST)){
         <div style="color:green;">ça marche !</div> -->
 
         <?php if(isset($error)) : ?>
-        <span><?= $error ?></span>
+        <div style="color:red;"><?= $error ?></div>
         <?php endif ?>
         
         <p>Activé symbole : </p>

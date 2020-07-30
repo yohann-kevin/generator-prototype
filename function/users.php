@@ -84,22 +84,28 @@ function addPassword() {
     global $db;
 
     extract($_POST);
-    // $validation = true;
+    $validation = true;
 
-    // $errors = [];
+    $errors = "";
 
-    // if (empty($password)) {
-    //     $validation = false;
-    //     $errors = [];
-    // }
+    if (empty($password)) {
+        $validation = false;
+        $errors = "Une erreur c'est produite !";
+    }
 
-   
-    $registerPassword = $db->prepare('INSERT INTO  password(password, users_id) VALUES (:password, :users_id)');
-    $registerPassword->execute([
-        'password' => htmlentities($password),
-        'users_id' => $_SESSION['user']
-    ]);
-    header('Location: account.php');
+    if (verifyNumPass() == 5) {
+        $validation = false;
+        $errors = "Vous avez déjà atteint le nombre maximal de mot de passe !";
+    }
+
+    if ($validation) {
+        $registerPassword = $db->prepare('INSERT INTO  password(password, users_id) VALUES (:password, :users_id)');
+        $registerPassword->execute([
+            'password' => htmlentities($password),
+            'users_id' => $_SESSION['user']
+        ]);
+        header('Location: account.php');
+    }
     
 
     return $errors;
