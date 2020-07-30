@@ -31,14 +31,13 @@ if(!empty($_POST)){
 
         <div id="generator">
             <!-- <input name="password" type="text" id="inputTest" value="<?php //if(isset($_POST['password']))echo $_POST['password'] ?>"> -->
-            <input type="password" name="password" id="inputTest">
+            <input type="text" name="password" id="inputTest">
         </div>
-        
-        <button type="submit">Enregistrer</button>
-        <!-- <input type="text" id="generator"> -->
+
         <?php if(isset($_SESSION['user'])) : ?>
-        
+        <button type="submit">Enregistrer</button>
         <?php endif ; ?>
+        
     </form>
 </section>
 <?php include_once 'layouts/footer.php' ?>
